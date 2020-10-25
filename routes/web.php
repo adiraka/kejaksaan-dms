@@ -14,5 +14,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return redirect()->route('admin.getLogin');
 });
+
+Route::prefix('admin')->group(function() {
+    Route::get('/', function () {
+        return redirect()->route('admin.getLogin');
+    });
+
+    Route::middleware(['guest'])->group(function() {
+        Route::get('login', 'Admin\AuthController@getLoginPage')->name('admin.getLogin');
+        Route::post('login', 'Admin\AuthController@postLogin')->name('admin.postLogin');
+    });
+
+    Route::middleware(['auth'])->group(function() {
+        Route::get('dashboard', 'Admin\DashboardController@getDashboard')->name('admin.dashboard');
+        Route::post('logout', 'Admin\AuthController@logout')->name('admin.logout');
+    });
+});
+
