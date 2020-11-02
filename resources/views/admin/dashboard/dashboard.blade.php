@@ -1,13 +1,13 @@
 @extends('adminlte::page')
 
-@section('title', 'Dashboard')
+@section('title', 'Beranda')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Beranda</h1>
 @stop
 
 @section('content')
-    <p>Welcome to this beautiful admin panel.</p>
+    <p>Selamat Datang di Kejaksaan Data Management System.</p>
 @stop
 
 @section('css')
