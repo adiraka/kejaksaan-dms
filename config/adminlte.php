@@ -251,13 +251,13 @@ return [
             'text'    => 'Jaksa',
             'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
+                // [
+                //     'text' => 'Buat Baru',
+                //     'url'  => '#',
+                // ],
                 [
-                    'text' => 'Buat Baru',
-                    'url'  => '#',
-                ],
-                [
-                    'text' => 'Tabel Data',
-                    'url'  => '#',
+                    'text' => 'Data Jaksa',
+                    'url'  => 'admin/prosecutors',
                 ],
             ],
         ],
@@ -265,10 +265,10 @@ return [
             'text'    => 'Terdakwa',
             'icon'    => 'fas fa-fw fa-user',
             'submenu' => [
-                [
-                    'text' => 'Buat Baru',
-                    'url'  => '#',
-                ],
+                // [
+                //     'text' => 'Buat Baru',
+                //     'url'  => '#',
+                // ],
                 [
                     'text' => 'Tabel Data',
                     'url'  => '#',
@@ -279,10 +279,10 @@ return [
             'text'    => 'Barang Bukti',
             'icon'    => 'fas fa-fw fa-book',
             'submenu' => [
-                [
-                    'text' => 'Buat Baru',
-                    'url'  => '#',
-                ],
+                // [
+                //     'text' => 'Buat Baru',
+                //     'url'  => '#',
+                // ],
                 [
                     'text' => 'Tabel Data',
                     'url'  => '#',

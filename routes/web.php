@@ -30,6 +30,12 @@ Route::prefix('admin')->group(function() {
     Route::middleware(['auth'])->group(function() {
         Route::get('dashboard', 'Admin\DashboardController@getDashboard')->name('admin.dashboard');
         Route::post('logout', 'Admin\AuthController@logout')->name('admin.logout');
+
+        Route::get('prosecutors', 'Admin\ProsecutorController@index')->name('prosecutor.index');
+        Route::get('prosecutorsData', 'Admin\ProsecutorController@indexData')->name('prosecutor.indexData');
+        Route::get('prosecutor/{id?}', 'Admin\ProsecutorController@detail')->name('prosecutor.detail');
+        Route::post('prosecutor/{id?}', 'Admin\ProsecutorController@save')->name('prosecutor.save');
+        Route::get('prosecutorFind', 'Admin\ProsecutorController@find')->name('prosecutor.find');
     });
 });
 
